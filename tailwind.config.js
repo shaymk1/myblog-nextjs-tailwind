@@ -5,7 +5,15 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				montserrat: "'montserrat', 'sans-serif'",
+				poppins: "'poppins' , 'sans-serif'",
+				comfortaa: "'comfortaa', 'script'",
+				yellowtail: "'yellowtail', 'script'",
+				humane: "'humane', 'sans-serif'",
+			},
+		},
 	},
 	plugins: [],
 };
