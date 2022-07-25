@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+@layer base{
+input {
+	@apply placeholder:text-xs placeholder:text-center  shadow-sm text-xs placeholder-slate-400 cursor-pointer mt-1 block w-60 px-3 py-2  border-2 border-[#83c5be] rounded-lg  bg-[#ffd6ff] text-slate-500 focus:outline-none focus:ring focus:ring-violet-300;
+}
+
+}
