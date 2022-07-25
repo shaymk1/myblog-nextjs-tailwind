@@ -1,15 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import Author from "./_child/Author";
 
 const Hero = () => {
+	const bg = {
+		background: "url('/images/banner.png') no-repeat",
+		backgroundPosition: "right",
+	};
 	return (
 		<>
-			<section className="py-16 ">
+			<section className="py-16 style={bg}">
 				<div className="container mx-auto md:px-20">
 					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 text-center">
 						Trending
 					</h1>
-                    
+
 					{Slide()}
 				</div>
 			</section>
@@ -56,15 +61,15 @@ function Slide() {
 					</Link>
 				</div>
 
-				<div className="text-gray-500 text-clip">
-					<p className="p-4 text-xs  md:text-sm">
+				<div className="text-gray-500 line-clamp-5 py-3 ">
+					<p className="p-4 text-xs  md:text-sm ">
 						It doesn’t interest me if the story you’re telling me is true. I
 						want to know if you can disappoint another to be true to yourself. I
 						want to know if you can see beauty even when it is not pretty every
 						day, and if you can source your life from God’s presence.
 					</p>
 
-					<p className="p-4 text-xs md:text-sm">
+					<p className="p-4 text-xs md:text-sm ">
 						If you can bear the accusation of betrayal and not betray your own
 						soul. I want to know if you can be faithful, and therefore be
 						trustworthy. I want to know if you can live with failure, yours and
@@ -89,6 +94,15 @@ function Slide() {
 						empty moments. .
 					</p>
 				</div>
+				<div className="mr-4 ml-3 text-center">
+					<Link href="http://www.oriahmountaindreamer.com/">
+						<a className="px-4 py-2 bg-[#1b96d9]  rounded-lg text-white text-center hover:bg-[#148ac9] mt-4 mb-2 ">
+							Learn More
+						</a>
+					</Link>
+				</div>
+
+				<Author />
 			</div>
 		</div>
 	);
