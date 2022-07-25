@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Author from "./_child/Author";
 
-const Hero = () => {
+const MainPage = () => {
 	const bg = {
 		background: "url('/images/banner.png') no-repeat",
 		backgroundPosition: "right",
@@ -22,7 +22,7 @@ const Hero = () => {
 	);
 };
 
-export default Hero;
+export default MainPage;
 
 function Slide() {
 	return (
