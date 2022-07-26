@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Author from "./_child/Author";
+import getPost from "../lib/helper";
 
 const LatestPosts = () => {
+	getPost().then(res=>console.log(res))
 	return (
 		<section className="container mx-auto md:px-20 py-10 px-4">
 			<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 text-center underline">
