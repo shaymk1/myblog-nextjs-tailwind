@@ -5,6 +5,9 @@ import Author from "./_child/Author";
 const Categories = () => {
 	return (
 		<section className="container mx-auto md:px-20 py-16 px-4">
+			<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline py-12 mb-4">
+				All Categories
+			</h1>
 			<div className="grid md:grid-cols-3 gap-8">
 				<div className="item">
 					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 underline">

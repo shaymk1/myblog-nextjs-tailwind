@@ -16,18 +16,18 @@ const Footer = () => {
   }
 	return (
 		<footer className="bg-[#aab3c3]" style={bg}>
-    <NewsLetter/>
+			<NewsLetter />
 			<div className="container mx-auto md:px-20 py-12 px-4">
 				<div className="py-5">
 					<div className="flex gap-6 justify-center">
 						{/*social -media-icons*/}
-						<div className="flex gap-6 text-white hover:text-[#f5cac3] cursor-pointer ">
+						<div className="flex gap-6 text-[#0077b6] hover:text-[#f5cac3] cursor-pointer ">
 							<Link href="https://github.com/shaymk1">
 								<a>
 									{" "}
 									<FaGithubSquare
 										size={25}
-										className=" text-white hover:text-[#f5cac3]"
+										className=" text-[#0077b6] hover:text-[#f5cac3]"
 									/>
 								</a>
 							</Link>
@@ -35,7 +35,7 @@ const Footer = () => {
 								<a>
 									<FaLinkedin
 										size={25}
-										className=" text-white hover:text-[#f5cac3]"
+										className=" text-[#0077b6] hover:text-[#f5cac3]"
 									/>
 								</a>
 							</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
 								<a>
 									<FaFacebook
 										size={25}
-										className=" text-white   hover:text-[#f5cac3]"
+										className=" text-[#0077b6]   hover:text-[#f5cac3]"
 									/>
 								</a>
 							</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
 									{" "}
 									<FaInstagramSquare
 										size={25}
-										className=" text-white hover:text-[#f5cac3]"
+										className=" text-[#0077b6] hover:text-[#f5cac3]"
 									/>
 								</a>
 							</Link>
