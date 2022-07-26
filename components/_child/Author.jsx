@@ -4,14 +4,16 @@ import Link from "next/link";
 const Author = () => {
 	return (
 		<div className="author flex py-5">
-			<Image
-				src="/images/author/myself-2.jpg"
-				alt=""
-				width="80px"
-				height="70px"
-				className="rounded-full"
-			/>
-			<div className="flex flex-col justify-center px-4 ">
+			<div className="hidden md:flex">
+				<Image
+					src="/images/author/myself-2.jpg"
+					alt=""
+					width="120px"
+					height="100px"
+					className="rounded-full "
+				/>
+			</div>
+			<div className=" flex-col justify-center px-4 hidden md:flex">
 				<Link href="/">
 					<a className="text-md font-bold text-gray-600 hover:text-gray-800">
 						Shay Kekae
