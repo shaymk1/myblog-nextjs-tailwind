@@ -1,44 +1,53 @@
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
+import Author from "./_child/Author";
 import Image from "next/image";
 import Link from "next/link";
-import Author from "./_child/Author";
+// Import Swiper styles
+import "swiper/css";
 
-const LatestPosts = () => {
+const MostPopular = () => {
+	//SwiperCore.use([Autoplay])
 	return (
-		<section className="container mx-auto md:px-20 py-10 px-4">
+		<section className="container mx-auto md:px-20 py-16 px-4">
 			<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 text-center underline">
-				Latest Posts
+				Most Popular
 			</h1>
-
-			{/*grid columns*/}
-			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-			</div>
+			{/*swiper*/}
+			<Swiper
+				spaceBetween={50}
+				slidesPerView={2}
+				loop={true}
+				autoplay={{
+					delay: 2000,
+				}}>
+				<SwiperSlide>{Posts()}</SwiperSlide>
+				<SwiperSlide>{Posts()}</SwiperSlide>
+				<SwiperSlide>{Posts()}</SwiperSlide>
+				<SwiperSlide>{Posts()}</SwiperSlide>
+				<SwiperSlide>{Posts()}</SwiperSlide>
+				<SwiperSlide>{Posts()}</SwiperSlide>
+			</Swiper>
 		</section>
 	);
 };
 
-export default LatestPosts;
+export default MostPopular;
+
 
 function Posts() {
 	return (
-		<div className="item">
+		<div className="grid ">
 			<div className="images">
 				<Link href="/">
 					<a>
 						<Image
-							className="rounded"
-							src="/images/fruits/2-dragons.jpg
+							
+							src="/images/fruits/pineaple.jpg
                             "
-							width="500px"
-							height="400px"
+							width="400px"
+							height="350px"
 							alt="nemaste"
 						/>
 					</a>
@@ -56,7 +65,7 @@ function Posts() {
 
 				<div className="title">
 					<Link href="/">
-						<a className="text-slate-500 hover:text-[#5d9bbc] text-xl  font-bold">
+						<a className="text-slate-500 hover:text-[#5d9bbc] text-3xl md:text-4xl  font-bold">
 							Learning To Code
 						</a>
 					</Link>
@@ -71,14 +80,12 @@ function Posts() {
 				<div className="text-gray-500  py-3 ">
 					<p className="p-4 text-xs  md:text-sm ">
 						It doesn’t interest me if the story you’re telling me is true. I
-						want to know if you can disappoint another to be true to yourself. 
-					
+						want to know if you can disappoint another to be true to yourself.
 					</p>
-
-					
 				</div>
 				<Author />
 			</div>
 		</div>
 	);
 }
+

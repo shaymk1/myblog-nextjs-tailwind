@@ -15,7 +15,7 @@ const MainPage = () => {
 	};
 	return (
 		<>
-			<section className="py-16 style={bg}">
+			<section className="py-16 style={bg} px-4">
 				<div className="container mx-auto md:px-20">
 					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline py-12">
 						Trending
