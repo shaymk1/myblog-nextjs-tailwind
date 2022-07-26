@@ -12,21 +12,21 @@ const MainPage = () => {
 	const bg = {
 		background: "url('/images/banner.png') no-repeat",
 		backgroundPosition: "right",
+		
 	};
 	return (
 		<>
-			<section className="py-16 style={bg} px-4">
+			<section className="py-16  px-4" style={bg}>
 				<div className="container mx-auto md:px-20">
 					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline py-12">
 						Trending
 					</h1>
-					<Swiper slidesPerView={1}
-					loop={true}
-					autoplay={{
-
-						delay:2000
-					}}
-					>
+					<Swiper
+						slidesPerView={1}
+						loop={true}
+						autoplay={{
+							delay: 2000,
+						}}>
 						<SwiperSlide>{Slide()}</SwiperSlide>
 						<SwiperSlide>{Slide()}</SwiperSlide>
 						<SwiperSlide>{Slide()}</SwiperSlide>
