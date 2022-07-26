@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import Fetcher from "../lib/fetcher";
 import Author from "./_child/Author";
-import getPost from "../lib/helper";
 
 const LatestPosts = () => {
-	getPost().then(res=>console.log(res))
+	//getPost().then(res=>console.log(res))
+	const { data, isLoading, isError } = Fetcher("api/posts");
+	if (data) {
+		console.log(data);
+	}
 	return (
 		<section className="container mx-auto md:px-20 py-10 px-4">
 			<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 text-center underline">
@@ -13,15 +17,9 @@ const LatestPosts = () => {
 
 			{/*grid columns*/}
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
-				{Posts()}
+				{data.map((value, index) => {
+					<Posts data={value} key={index}></Posts>;
+				})}
 			</div>
 		</section>
 	);
@@ -29,7 +27,9 @@ const LatestPosts = () => {
 
 export default LatestPosts;
 
-function Posts() {
+function Posts({ data }) {
+	const { id, title, subtitle, category, img, published, author, description } =
+		data;
 	return (
 		<div className="item">
 			<div className="images">
@@ -37,8 +37,7 @@ function Posts() {
 					<a>
 						<Image
 							className="rounded"
-							src="/images/fruits/2-dragons.jpg
-                            "
+							src={img || "/"}
 							width="500px"
 							height="400px"
 							alt="nemaste"
@@ -51,7 +50,7 @@ function Posts() {
 				<div className="cat">
 					<Link href="/">
 						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest">
-							Coding
+							{category || "unknown"}
 						</a>
 					</Link>
 				</div>
@@ -59,27 +58,21 @@ function Posts() {
 				<div className="title">
 					<Link href="/">
 						<a className="text-slate-500 hover:text-[#5d9bbc] text-xl  font-bold">
-							Learning To Code
+							{title || "Title"}
 						</a>
 					</Link>
 
 					<Link href="/">
 						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2">
-							-25 July 2022
+							-{published || "unknown"}
 						</a>
 					</Link>
 				</div>
 
 				<div className="text-gray-500  py-3 ">
-					<p className="p-4 text-xs  md:text-sm ">
-						It doesn’t interest me if the story you’re telling me is true. I
-						want to know if you can disappoint another to be true to yourself. 
-					
-					</p>
-
-					
+					<p className="p-4 text-xs  md:text-sm ">{subtittle || "subtitle"}</p>
 				</div>
-				<Author />
+				{author ? <Author /> : <></>}
 			</div>
 		</div>
 	);
