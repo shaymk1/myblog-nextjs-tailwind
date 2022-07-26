@@ -40,7 +40,7 @@ export default {
 			title: "My Spiritual Journey",
 			subtitle: "Being Awareness",
 			category: "Spirituality",
-			img: "/images/fruits/avos.png",
+			img: "/images/fruits/avos.jpg",
 			description: `
             I have been on this spiritual journey for over 15 years. I am still working on myself, and will continuing doing so till i leave the vessel. I have gone through ego death, kundulani awakening and all that jazz but it sometimes still so hard to maintain the 5th dimensional vibration when you are still in the world daily, I guess thats the beauty of it.
             `,
@@ -72,7 +72,7 @@ export default {
 			id: 5,
 			title: "Coding is hard",
 			subtitle: "How it finally clicked for me",
-			category: "Business, Travel",
+			category: "Coding",
 			img: "/images/fruits/dragon.jpg",
 			description: `
             I started my coding journey in the backend with python and django. I used free resources on Youtube as well as paid courses in Udemy. In the beginning it did not make sense at all, but i stuck with it and did a lot of projects, and soon you realize that there are patterns to this thing.
@@ -200,7 +200,7 @@ export default {
 			title: "Awakening To Your Higher Dimensional Self",
 			subtitle: "Being 5D self",
 			category: "Spirituality",
-			img: "/images/fruits/pineaple.jpg",
+			img: "/images/fruits/avos.jpg",
 			description: `
             We are higher dimensional beings..
 
@@ -235,7 +235,7 @@ export default {
 			title: "My Spiritual Journey",
 			subtitle: "Being Awareness",
 			category: "Spirituality",
-			img: "/images/fruits/avos.png",
+			img: "/images/fruits/pineaple.jpg",
 			description: `
             I have been on this spiritual journey for over 15 years. I am still working on myself, and will continuing doing so till i leave the vessel. I have gone through ego death, kundulani awakening and all that jazz but it sometimes still so hard to maintain the 5th dimensional vibration when you are still in the world daily, I guess thats the beauty of it.
 
@@ -305,7 +305,7 @@ export default {
 			id: 5,
 			title: "Coding is hard",
 			subtitle: "How it finally clicked for me",
-			category: "Business, Travel",
+			category: "Coding",
 			img: "/images/fruits/dragon.jpg",
 			description: `
             I started my coding journey in the backend with python and django. I used free resources on Youtube as well as paid courses in Udemy. In the beginning it did not make sense at all, but i stuck with it and did a lot of projects, and soon you realize that there are patterns to this thing.
@@ -525,7 +525,7 @@ export default {
 			title: "My Spiritual Journey",
 			subtitle: "Being Awareness",
 			category: "Spirituality",
-			img: "/images/fruits/avos.png",
+			img: "/images/fruits/pineaple.jpg",
 			description: `
             I have been on this spiritual journey for over 15 years. I am still working on myself, and will continuing doing so till i leave the vessel. I have gone through ego death, kundulani awakening and all that jazz but it sometimes still so hard to maintain the 5th dimensional vibration when you are still in the world daily, I guess thats the beauty of it.
             `,
@@ -540,7 +540,7 @@ export default {
 			id: 4,
 			title: "Coding is hard",
 			subtitle: "How it finally clicked for me",
-			category: "Business, Travel",
+			category: "Coding",
 			img: "/images/fruits/dragon.jpg",
 			description: `
             I started my coding journey in the backend with python and django. I used free resources on Youtube as well as paid courses in Udemy. In the beginning it did not make sense at all, but i stuck with it and did a lot of projects, and soon you realize that there are patterns to this thing.

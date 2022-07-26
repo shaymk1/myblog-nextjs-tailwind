@@ -17,9 +17,9 @@ const LatestPosts = () => {
 
 			{/*grid columns*/}
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
-				{data.map((value, index) => {
-					<Posts data={value} key={index}></Posts>;
-				})}
+				{data && data.map((value, id) => (
+					<Posts data={value} key={id}/> 
+				))}
 			</div>
 		</section>
 	);
@@ -70,7 +70,7 @@ function Posts({ data }) {
 				</div>
 
 				<div className="text-gray-500  py-3 ">
-					<p className="p-4 text-xs  md:text-sm ">{subtittle || "subtitle"}</p>
+					<p className="p-4 text-xs  md:text-sm ">{subtitle || "subtitle"}</p>
 				</div>
 				{author ? <Author /> : <></>}
 			</div>
