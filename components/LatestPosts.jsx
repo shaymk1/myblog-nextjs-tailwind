@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Fetcher from "../lib/fetcher";
 import Author from "./_child/Author";
+import spinner from "./_child/spinner";
+import error from "./_child/error";
 
 const LatestPosts = () => {
 	//getPost().then(res=>console.log(res))
 	const { data, isLoading, isError } = Fetcher("api/posts");
-	if (data) {
-		console.log(data);
-	}
+	if (isLoading) return <spinner></spinner>;
+	if (isError) return <error />;
 	return (
 		<section className="container mx-auto md:px-20 py-10 px-4">
 			<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 text-center underline">
