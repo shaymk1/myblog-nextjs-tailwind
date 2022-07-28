@@ -14,13 +14,15 @@ const NewsLetter = () => {
 						name=""
 						id=""
 						placeholder="enter your email address"
-						className="shadow border rounded w-9/12 py-3 px-3
-                    text-slate-500 focus:outline-none focus:shadow-outline ml-2 placeholder:text-xs placeholder:text-center placeholder-slate-400 bg-[#ffd6ff] "
+						className="shadow border mb-2 w-full inline-block px-16 py-2.5 rounded-full
+                    text-slate-500 focus:outline-none focus:shadow-outline placeholder:sm:text-xs placeholder:text-center placeholder-slate-400 bg-[#ffd6ff] "
 					/>
 				</div>
-				<button className=" bg-[#1b96d9]  rounded-lg text-white text-center hover:bg-[#148ac9] px-20 py-3 ">
-					Subscribe
-				</button>
+				<div className="justify-center">
+					<button className=" bg-[#1b96d9]  rounded-full text-white text-center hover:bg-[#148ac9]  w-full inline-block px-16 py-2.5 transition duration-150 ease-in-out">
+						Subscribe
+					</button>
+				</div>
 			</div>
 		</section>
 	);

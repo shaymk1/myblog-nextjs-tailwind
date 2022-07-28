@@ -27,7 +27,7 @@ const Footer = () => {
 									{" "}
 									<FaGithubSquare
 										size={25}
-										className=" text-[#0077b6] hover:text-[#f5cac3]"
+										className=" text-[#0077b6] hover:text-[#f5cac3] transition duration-150 ease-in-out"
 									/>
 								</a>
 							</Link>
@@ -35,7 +35,7 @@ const Footer = () => {
 								<a>
 									<FaLinkedin
 										size={25}
-										className=" text-[#0077b6] hover:text-[#f5cac3]"
+										className=" text-[#0077b6] hover:text-[#f5cac3] transition duration-150 ease-in-out"
 									/>
 								</a>
 							</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
 								<a>
 									<FaFacebook
 										size={25}
-										className=" text-[#0077b6]   hover:text-[#f5cac3]"
+										className=" text-[#0077b6]   hover:text-[#f5cac3] transition duration-150 ease-in-out"
 									/>
 								</a>
 							</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
 									{" "}
 									<FaInstagramSquare
 										size={25}
-										className=" text-[#0077b6] hover:text-[#f5cac3]"
+										className=" text-[#0077b6] hover:text-[#f5cac3] transition duration-150 ease-in-out"
 									/>
 								</a>
 							</Link>
