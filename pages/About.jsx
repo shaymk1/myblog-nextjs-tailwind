@@ -9,9 +9,13 @@ const About = () => {
 	return (
 		<section className="py-16  px-4" style={bg}>
 			<div className="container mx-auto md:px-20">
-				<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline py-12">
-					About Me
-				</h1>
+				<Link href="/">
+					<a>
+						<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline py-12">
+							About Me
+						</h1>
+					</a>
+				</Link>
 
 				<div className="grid md:grid-cols-2">
 					<div className="image">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import About from "../../pages/About";
+
 
 const Author = ({ name, img, designation }) => {
 	if(!name && !img) return <></>
@@ -24,7 +24,7 @@ const Author = ({ name, img, designation }) => {
 
 				<span className="text-xs text-gray-500"> {designation}</span>
 			</div>
-			<About/>
+			
 		</div>
 	);
 };

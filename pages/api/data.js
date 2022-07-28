@@ -26,7 +26,11 @@ export default {
 			category: "Spirituality",
 			img: "/images/fruits/pineaple.jpg",
 			description: `
-            We are higher dimensional beings..
+            If you can bear the accusation of betrayal and not betray your own
+						soul. I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon
             `,
 			published: "Jun 20,  2022",
 			author: {
@@ -201,8 +205,11 @@ export default {
 			category: "Spirituality",
 			img: "/images/fruits/img5.png",
 			description: `
-            We are higher dimensional beings..
-
+           If you can bear the accusation of betrayal and not betray your own
+						soul. I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon
              If you can bear the accusation of betrayal and not betray your own
 						soul. I want to know if you can be faithful, and therefore be
 						trustworthy. I want to know if you can live with failure, yours and
