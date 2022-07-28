@@ -10,7 +10,7 @@ const Categories = () => {
 	if (isLoading) return <spinner></spinner>;
 	if (isError) return <error />;
 	return (
-		<section className="container mx-auto md:px-20 md:py-16 px-4 ">
+		<section className="container mx-auto md:px-20 md:py-16 px-4 text-center">
 			<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline pt-0 mb-4 py-12">
 				All Categories
 			</h1>
@@ -41,7 +41,7 @@ const Categories = () => {
 				</div>
 
 				<div className="item">
-					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12 ">
+					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold pb-12  text-center">
 						Art
 					</h1>
 					<div className="flex flex-col gap-6">
@@ -61,7 +61,7 @@ export default Categories;
 function Post({data}) {
 	const { id,title, category, img, published, author, description } = data;
 	return (
-		<div className="flex gap-5">
+		<div className="flex gap-5 px-6">
 			<div className="image flex flex-col justify-start cursor-pointer">
 				<Link href={`posts/${id}`}>
 					<a>
@@ -77,7 +77,7 @@ function Post({data}) {
 			</div>
 
 			<div className="info flex flex-col justify-center py-4">
-				<div className="cat">
+				<div className="cat text-center">
 					<Link href={`posts/${id}`}>
 						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest cursor-pointer">
 							{category || "unknown"}
@@ -98,8 +98,9 @@ function Post({data}) {
 						</a>
 					</Link>
 				</div>
-
-				{author ? <Author {...author} /> : <></>}
+				<div className="md:hidden">
+					{author ? <Author {...author} /> : <></>}
+				</div>
 			</div>
 		</div>
 	);

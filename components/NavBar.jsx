@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import {
 	FaFacebook,
 	FaGithubSquare,
@@ -7,11 +11,40 @@ import {
 } from "react-icons/fa";
 
 const NavBar = () => {
+	//switching themes
+	const {systemTheme, theme, setTheme} = useTheme()
+	//checking if the component has been mounted
+	const [mounted,setMounted] = useState(false)
+	useEffect(()=>{
+		setMounted(true)
+	},[])
+	const renderThemeChanger = ()=>{
+		if(!mounted)return null
+		const currentTheme = theme =='system'? systemTheme :theme
+
+		if(currentTheme == 'dark'){
+			return (
+				<BsFillSunFill
+					className="w-7 h-7 "
+					role="button"
+					onClick={()=> setTheme('light')}
+				/>
+			);
+		}else{
+			return (
+				<BsFillMoonFill
+					className="w-7 h-7 "
+					role="button"
+					onClick={() => setTheme("dark")}
+				/>
+			);
+		}
+	}
 	return (
 		<header className="bg-[#8e9aaf] ">
-			<nav className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
+			<nav className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between md:justify-evenly text-center py-3 dark:border-slate-700">
 				{/*search-post*/}
-				<div className="md:flex-none w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
+				<div className="md:flex-none w-96 order-1 sm:order-1 flex justify-center py-4 sm:py-0">
 					<input type="text" name="" placeholder="search.." className="" />
 				</div>
 				{/*logo*/}
@@ -20,7 +53,7 @@ const NavBar = () => {
 						<a>Stillness</a>
 					</Link>
 				</div>
-				<div className="w-96 order-3 flex justify-center ">
+				<div className="w-96 order-2 flex justify-center ">
 					{/*social -media-icons*/}
 					<div className="flex gap-6 text-white hover:text-[#f5cac3] cursor-pointer ">
 						<Link href="https://github.com/shaymk1">
@@ -59,6 +92,10 @@ const NavBar = () => {
 							</a>
 						</Link>
 					</div>
+				</div>
+				{/*theme*/}
+				<div className="px-2 order-3 sm:order-3 py-4 pr-4">
+					{renderThemeChanger()}
 				</div>
 			</nav>
 		</header>
