@@ -40,7 +40,7 @@ export default {
 			title: "My Spiritual Journey",
 			subtitle: "Being Awareness",
 			category: "Spirituality",
-			img: "/images/fruits/avos.jpg",
+			img: "/images/fruits/img5.png",
 			description: `
             I have been on this spiritual journey for over 15 years. I am still working on myself, and will continuing doing so till i leave the vessel. I have gone through ego death, kundulani awakening and all that jazz but it sometimes still so hard to maintain the 5th dimensional vibration when you are still in the world daily, I guess thats the beauty of it.
             `,
@@ -120,7 +120,6 @@ export default {
 				designation: "Founder",
 			},
 		},
-
 		{
 			id: 8,
 			title: "Choosing what to draw",
@@ -197,10 +196,10 @@ export default {
 
 		{
 			id: 2,
-			title: "Awakening To Your Higher Dimensional Self",
+			title: "Awakening To Your Higher Self",
 			subtitle: "Being 5D self",
 			category: "Spirituality",
-			img: "/images/fruits/avos.jpg",
+			img: "/images/fruits/img5.png",
 			description: `
             We are higher dimensional beings..
 
@@ -491,10 +490,39 @@ export default {
 			category: "Spirituality",
 			img: "/images/fruits/orange-blue.jpg",
 			description: `
-            It doesn’t interest me if the story you’re telling me is true. I
-						want to know if you can disappoint another to be true to yourself. I
-						want to know if you can see beauty even when it is not pretty every
-						day, and if you can source your life from God’s presence.
+            It doesn’t interest me if the story you’re telling me is true. I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+                        It doesn’t interest me to know where you live or how much money you
+						have. I want to know if you can get up after a night of grief and
+						despair, weary and bruised to the bone -- and do what needs to be
+						done -- for the children.
+
+						I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+						I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+						I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+                     
+					
+
+                     
+
+                     
+					
+				
             `,
 			published: "Jun 3,  2022",
 			author: {
@@ -511,6 +539,34 @@ export default {
 			img: "/images/fruits/paw-paw.jpg",
 			description: `
             I do not choose what to draw, the things i need to draw come to me, i look at a picture and it will scream please draw me.
+
+			I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+                        It doesn’t interest me to know where you live or how much money you
+						have. I want to know if you can get up after a night of grief and
+						despair, weary and bruised to the bone -- and do what needs to be
+						done -- for the children.
+
+                        It doesn’t interest me who you are or how you came to be here. I
+						want to know if you will stand in the center of the fire with me --
+						and not shrink back. It doesn’t interest me where or what or “with
+						whom you have studied”. I want to know what sustains you from the
+						inside when all else falls away. I want to know if you can be alone
+						with yourself and if you truly like the company you keep - - in the
+						empty moments.
+
+
+						I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+                   
+
+                     
             `,
 			published: "Jun 16,  2022",
 			author: {
@@ -581,6 +637,45 @@ export default {
             You see, coding for me is a creative space, it's not only a thing i do, it's an opportunity to express myself creatively. I need to be in a space for it first even though it is not always going to be so.
             `,
 			published: "Jun 14,  2022",
+			author: {
+				name: "Shay Kekae",
+				img: "/images/author/myself-2.jpg",
+				designation: "Founder",
+			},
+		},
+
+		{
+			id: 7,
+			title: "The Invitation by Oriah Mountain Dreamer",
+			subtitle: "Being Stillness",
+			category: "Spirituality",
+			img: "/images/fruits/img5.png",
+			description: `
+            It doesn’t interest me if the story you’re telling me is true. I
+						want to know if you can disappoint another to be true to yourself. I
+						want to know if you can see beauty even when it is not pretty every
+						day, and if you can source your life from God’s presence.
+
+                        If you can bear the accusation of betrayal and not betray your own
+						soul. I want to know if you can be faithful, and therefore be
+						trustworthy. I want to know if you can live with failure, yours and
+						mine, and still stand on the edge of a lake and shout to the silver
+						of the full moon.
+
+                        It doesn’t interest me to know where you live or how much money you
+						have. I want to know if you can get up after a night of grief and
+						despair, weary and bruised to the bone -- and do what needs to be
+						done -- for the children.
+
+                        It doesn’t interest me who you are or how you came to be here. I
+						want to know if you will stand in the center of the fire with me --
+						and not shrink back. It doesn’t interest me where or what or “with
+						whom you have studied”. I want to know what sustains you from the
+						inside when all else falls away. I want to know if you can be alone
+						with yourself and if you truly like the company you keep - - in the
+						empty moments.
+            `,
+			published: "Jun 3,  2022",
 			author: {
 				name: "Shay Kekae",
 				img: "/images/author/myself-2.jpg",

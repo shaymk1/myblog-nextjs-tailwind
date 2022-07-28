@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {Autoplay} from "swiper"
 // Import Swiper styles
 import 'swiper/css';
+import Fetcher from "../lib/fetcher";
+//import spinner from "./_child/spinner";
+//import error from "./_child/error";
 
 const MainPage = () => {
 	//SwiperCore.use([Autoplay])
@@ -14,6 +17,10 @@ const MainPage = () => {
 		backgroundPosition: "right",
 		
 	};
+
+	const { data, isLoading, isError } = Fetcher("api/trending");
+	if (isLoading) return <spinner></spinner>;
+	if (isError) return <error />;
 	return (
 		<>
 			<section className="py-16  px-4" style={bg}>
@@ -27,11 +34,12 @@ const MainPage = () => {
 						autoplay={{
 							delay: 2000,
 						}}>
-						<SwiperSlide>{Slide()}</SwiperSlide>
-						<SwiperSlide>{Slide()}</SwiperSlide>
-						<SwiperSlide>{Slide()}</SwiperSlide>
-						<SwiperSlide>{Slide()}</SwiperSlide>
-						<SwiperSlide>{Slide()}</SwiperSlide>
+						{data &&
+							data.map((value, id) => (
+								<SwiperSlide key={id}>
+									<Slide data={value} />
+								</SwiperSlide>
+							))}
 					</Swiper>
 				</div>
 			</section>
@@ -41,7 +49,10 @@ const MainPage = () => {
 
 export default MainPage;
 
-function Slide() {
+function Slide({ data }) {
+	
+	const {title,  category, img, published, author, description} = data;
+	
 	return (
 		<div className="grid md:grid-cols-2">
 			<div className="image">
@@ -49,7 +60,7 @@ function Slide() {
 					<a>
 						<Image
 							className="rounded"
-							src="/images/nemaste-1.jpg"
+							src={img || "/"}
 							width="600px"
 							height="600px"
 							alt="nemaste"
@@ -61,55 +72,37 @@ function Slide() {
 				<div className="cat">
 					<Link href="/">
 						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest">
-							Spirituality{" "}
+							{category || "unknown"}
 						</a>
 					</Link>
 				</div>
 				<div className="title">
 					<Link href="/">
 						<a className="text-slate-500 hover:text-[#5d9bbc] text-3xl md:text-6xl font-bold">
-							The Invitation by Oriah Mountain Dreamer
+							{title || "Title"}
 						</a>
 					</Link>
 
 					<Link href="/">
 						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2">
-							-25 July 2022
+							-{published || "unknown"}
 						</a>
 					</Link>
 				</div>
 
 				<div className="text-gray-500 line-clamp-5 py-3 ">
 					<p className="p-4 text-xs  md:text-sm ">
-						It doesn’t interest me if the story you’re telling me is true. I
-						want to know if you can disappoint another to be true to yourself. I
-						want to know if you can see beauty even when it is not pretty every
-						day, and if you can source your life from God’s presence.
+						{description || Description}
 					</p>
 
 					<p className="p-4 text-xs md:text-sm ">
-						If you can bear the accusation of betrayal and not betray your own
-						soul. I want to know if you can be faithful, and therefore be
-						trustworthy. I want to know if you can live with failure, yours and
-						mine, and still stand on the edge of a lake and shout to the silver
-						of the full moon.
+						{description || Description}
 					</p>
 
-					<p className="p-4 text-xs md:text-sm">
-						It doesn’t interest me to know where you live or how much money you
-						have. I want to know if you can get up after a night of grief and
-						despair, weary and bruised to the bone -- and do what needs to be
-						done -- for the children.
-					</p>
+					<p className="p-4 text-xs md:text-sm">{description || Description}</p>
 
 					<p className="p-4 text-xs md:text-sm mb-2">
-						It doesn’t interest me who you are or how you came to be here. I
-						want to know if you will stand in the center of the fire with me --
-						and not shrink back. It doesn’t interest me where or what or “with
-						whom you have studied”. I want to know what sustains you from the
-						inside when all else falls away. I want to know if you can be alone
-						with yourself and if you truly like the company you keep - - in the
-						empty moments. .
+						{description || Description} .
 					</p>
 				</div>
 				<div className="mr-4 ml-3 text-center">
@@ -120,7 +113,7 @@ function Slide() {
 					</Link>
 				</div>
 
-				<Author />
+				{author ? <Author /> : <></>}
 			</div>
 		</div>
 	);

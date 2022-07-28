@@ -4,7 +4,7 @@ import Link from "next/link";
 const Author = () => {
 	return (
 		<div className="author flex py-5">
-			<div className="hidden md:flex">
+			<div className="flex">
 				<Image
 					src="/images/author/myself-2.jpg"
 					alt=""
@@ -15,7 +15,7 @@ const Author = () => {
 			</div>
 			<div className=" flex-col justify-center px-4 hidden md:flex">
 				<Link href="/">
-					<a className="text-md font-bold text-gray-600 hover:text-gray-800">
+					<a className="text-sm font-bold text-gray-600 hover:text-gray-800">
 						Shay Kekae
 					</a>
 				</Link>

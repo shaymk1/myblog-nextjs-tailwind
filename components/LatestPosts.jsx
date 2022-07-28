@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Fetcher from "../lib/fetcher";
 import Author from "./_child/Author";
-import spinner from "./_child/spinner";
-import error from "./_child/error";
+//import spinner from "./_child/spinner";
+//import error from "./_child/error";
 
 const LatestPosts = () => {
 	//getPost().then(res=>console.log(res))
