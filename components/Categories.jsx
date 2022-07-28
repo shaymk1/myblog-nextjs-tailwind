@@ -59,13 +59,14 @@ const Categories = () => {
 export default Categories;
 
 function Post({data}) {
-	const { title, category, img, published, author, description } = data;
+	const { id,title, category, img, published, author, description } = data;
 	return (
 		<div className="flex gap-5">
-			<div className="image flex flex-col justify-start">
-				<Link href="/">
+			<div className="image flex flex-col justify-start cursor-pointer">
+				<Link href={`posts/${id}`}>
 					<a>
 						<Image
+							className="cursor-pointer rounded"
 							src={img || "/"}
 							width="400px"
 							height="350px"
@@ -77,28 +78,28 @@ function Post({data}) {
 
 			<div className="info flex flex-col justify-center py-4">
 				<div className="cat">
-					<Link href="/">
-						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest">
+					<Link href={`posts/${id}`}>
+						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest cursor-pointer">
 							{category || "unknown"}
 						</a>
 					</Link>
 				</div>
 
 				<div className="title">
-					<Link href="/">
-						<a className="text-slate-500 hover:text-[#5d9bbc] font-bold">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-500 hover:text-[#5d9bbc] font-bold cursor-pointer">
 							{title || "Title"}
 						</a>
 					</Link>
 
-					<Link href="/">
-						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2 text-xs">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2 text-xs cursor-pointer">
 							-{published || "unknown"}
 						</a>
 					</Link>
 				</div>
 
-				{author ? <Author /> : <></>}
+				{author ? <Author {...author} /> : <></>}
 			</div>
 		</div>
 	);

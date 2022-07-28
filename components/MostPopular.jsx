@@ -11,7 +11,7 @@ import Fetcher from "../lib/fetcher";
 //import error from "./_child/error";
 
 const MostPopular = () => {
-	//SwiperCore.use([Autoplay])
+	SwiperCore.use([Autoplay])
 	const { data, isLoading, isError } = Fetcher("api/popular");
 	if (isLoading) return <spinner></spinner>;
 	if (isError) return <error />;
@@ -23,10 +23,16 @@ const MostPopular = () => {
 			{/*swiper*/}
 			<Swiper
 				spaceBetween={50}
-				slidesPerView={2}
 				loop={true}
 				autoplay={{
 					delay: 2000,
+				}}
+				breakpoints={{
+					640:{
+					slidesPerView:2,
+					spaceBetween:30
+
+					}
 				}}>
 				{data &&
 					data.map((value, id) => (
@@ -44,13 +50,14 @@ export default MostPopular;
 
 
 function Posts({ data }) {
-	const { title, category, img, published, author, description } = data;
+	const {id, title, category, img, published, author, description } = data;
 	return (
 		<div className="grid ">
 			<div className="images">
-				<Link href="/">
+				<Link href={`posts/${id}`}>
 					<a>
 						<Image
+							className="rounded cursor-pointer"
 							src={img || "/"}
 							width="400px"
 							height="350px"
@@ -62,22 +69,22 @@ function Posts({ data }) {
 
 			<div className="info flex flex-col justify-center py-4">
 				<div className="cat">
-					<Link href="/">
-						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest">
+					<Link href={`posts/${id}`}>
+						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest cursor-pointer">
 							{category || "unknown"}
 						</a>
 					</Link>
 				</div>
 
 				<div className="title sm:p-4">
-					<Link href="/">
-						<a className="text-slate-500 hover:text-[#5d9bbc] text-2xl md:text-4xl  font-bold ">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-500 hover:text-[#5d9bbc] text-2xl md:text-4xl  font-bold cursor-pointer">
 							{title || "Title"}
 						</a>
 					</Link>
 
-					<Link href="/">
-						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2 cursor-pointer">
 							-{published || "unknown"}
 						</a>
 					</Link>
@@ -88,7 +95,7 @@ function Posts({ data }) {
 						{description || Description}.
 					</p>
 				</div>
-				{author ? <Author /> : <></>}
+				{author ? <Author {...author} /> : <></>}
 			</div>
 		</div>
 	);

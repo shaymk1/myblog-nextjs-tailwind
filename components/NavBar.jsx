@@ -16,7 +16,7 @@ const NavBar = () => {
 				</div>
 				{/*logo*/}
 				<div className="shrink-w-80 sm:order-2 uppercase font-bold font-humane tracking-widest  text-3xl text-[#a9def9] hover:text-white">
-					<Link href="/">
+					<Link href={`posts/${id}`}>
 						<a>Stillness</a>
 					</Link>
 				</div>

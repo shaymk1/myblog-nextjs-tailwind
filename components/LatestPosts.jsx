@@ -34,10 +34,10 @@ function Posts({ data }) {
 	return (
 		<div className="item">
 			<div className="images">
-				<Link href="/">
+				<Link href={`posts/${id}`}>
 					<a>
 						<Image
-							className="rounded"
+							className="rounded cursor-pointer"
 							src={img || "/"}
 							width="500px"
 							height="400px"
@@ -49,22 +49,22 @@ function Posts({ data }) {
 
 			<div className="info flex flex-col justify-center py-4">
 				<div className="cat">
-					<Link href="/">
-						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest">
+					<Link href={`posts/${id}`}>
+						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest cursor-pointer">
 							{category || "unknown"}
 						</a>
 					</Link>
 				</div>
 
 				<div className="title">
-					<Link href="/">
-						<a className="text-slate-500 hover:text-[#5d9bbc] text-xl  font-bold">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-500 hover:text-[#5d9bbc] text-xl  font-bold cursor-pointer ">
 							{title || "Title"}
 						</a>
 					</Link>
 
-					<Link href="/">
-						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2 cursor-pointer">
 							-{published || "unknown"}
 						</a>
 					</Link>
@@ -73,7 +73,7 @@ function Posts({ data }) {
 				<div className="text-gray-500  py-3 ">
 					<p className="p-4 text-xs  md:text-sm ">{subtitle || "subtitle"}</p>
 				</div>
-				{author ? <Author /> : <></>}
+				{author ? <Author {...author} /> : <></>}
 			</div>
 		</div>
 	);

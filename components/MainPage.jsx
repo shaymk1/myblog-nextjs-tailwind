@@ -51,15 +51,15 @@ export default MainPage;
 
 function Slide({ data }) {
 	
-	const {title,  category, img, published, author, description} = data;
+	const {id, title,  category, img, published, author, description} = data;
 	
 	return (
 		<div className="grid md:grid-cols-2">
 			<div className="image">
-				<Link href="/">
+				<Link href={`posts/${id}`}>
 					<a>
 						<Image
-							className="rounded"
+							className="rounded cursor-pointer"
 							src={img || "/"}
 							width="600px"
 							height="600px"
@@ -70,21 +70,21 @@ function Slide({ data }) {
 			</div>
 			<div className="info flex justify-center flex-col ml-3">
 				<div className="cat">
-					<Link href="/">
-						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest">
+					<Link href={`posts/${id}`}>
+						<a className="text-[#669bbc] hover:text-[#0077b6] text-2xl font-bold leading-10 uppercase font-humane tracking-widest cursor-pointer">
 							{category || "unknown"}
 						</a>
 					</Link>
 				</div>
 				<div className="title">
-					<Link href="/">
-						<a className="text-slate-500 hover:text-[#5d9bbc] text-3xl md:text-6xl font-bold">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-500 hover:text-[#5d9bbc] text-3xl md:text-6xl font-bold cursor-pointer">
 							{title || "Title"}
 						</a>
 					</Link>
 
-					<Link href="/">
-						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2">
+					<Link href={`posts/${id}`}>
+						<a className="text-slate-400 hover:text-[#5d9bbc] ml-2 cursor-pointer">
 							-{published || "unknown"}
 						</a>
 					</Link>
@@ -105,15 +105,8 @@ function Slide({ data }) {
 						{description || Description} .
 					</p>
 				</div>
-				<div className="mr-4 ml-3 text-center">
-					<Link href="http://www.oriahmountaindreamer.com/">
-						<a className="px-4 py-2 bg-[#1b96d9]  rounded-lg text-white text-center hover:bg-[#148ac9] mt-4 mb-2 ">
-							Learn More
-						</a>
-					</Link>
-				</div>
 
-				{author ? <Author /> : <></>}
+				{author ? <Author {...author} /> : <></>}
 			</div>
 		</div>
 	);
