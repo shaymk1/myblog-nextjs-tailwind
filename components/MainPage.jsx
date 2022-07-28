@@ -23,7 +23,7 @@ const MainPage = () => {
 	if (isError) return <error />;
 	return (
 		<>
-			<section className="py-16  px-4" style={bg}>
+	<section className="py-16  px-4" style={bg}>
 				<div className="container mx-auto md:px-20">
 					<h1 className="uppercase text-4xl font-humane tracking-widest text-[#0077b6] font-bold  text-center underline py-12">
 						Trending
@@ -105,8 +105,7 @@ function Slide({ data }) {
 						{description || Description} .
 					</p>
 				</div>
-
-				{author ? <Author {...author} /> : <></>}
+				<Link href="/About">{author ? <Author {...author} /> : <></>}</Link>
 			</div>
 		</div>
 	);

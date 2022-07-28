@@ -5,9 +5,10 @@ import {
 	FaInstagramSquare,
 	FaLinkedin,
 } from "react-icons/fa";
+import { SiAboutdotme } from "react-icons/si";
 
 import NewsLetter from "./_child/NewsLetter";
-
+import About from "../pages/About";
 const Footer = () => {
   const bg={
     backgroundImage:"url('/images/footer.png')",
@@ -21,7 +22,7 @@ const Footer = () => {
 				<div className="py-5">
 					<div className="flex gap-6 justify-center">
 						{/*social -media-icons*/}
-						<div className="flex gap-6 text-[#0077b6] hover:text-[#f5cac3] cursor-pointer ">
+						<div className="flex gap-6 text-[#0077b6] hover:text-[#f5cac3] cursor-pointer items-center">
 							<Link href="https://github.com/shaymk1">
 								<a>
 									{" "}
@@ -54,6 +55,16 @@ const Footer = () => {
 									<FaInstagramSquare
 										size={25}
 										className=" text-[#0077b6] hover:text-[#f5cac3] transition duration-150 ease-in-out"
+									/>
+								</a>
+							</Link>
+							<Link href="/About">
+								<a className="md:text-md sm:text-xs rounded-full p-2 m-1 bg-white text-gray-400">
+									{" "}
+									<SiAboutdotme
+										size={14}
+										className=" 
+										text-[#0077b6]  hover:text-slate-600 transition duration-150 ease-in-out "
 									/>
 								</a>
 							</Link>

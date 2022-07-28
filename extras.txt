@@ -1,4 +1,14 @@
+<p className="p-4 text-xs  md:text-sm ">
+								`Where i talk about my spiritual journey, my coding journey , my
+								art journey and all other journeys in between. It is all about
+								the journeys right? Please come along... `
+							</p>
+
+
+
+
 84a59d
+
 
  w-9/12 py-3 px-3
 

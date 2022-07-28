@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import About from "../pages/About";
 
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import {SiAboutdotme} from "react-icons/si"
+import {FcAbout} from "react-icons/fc"
 import {
 	FaFacebook,
 	FaGithubSquare,
@@ -55,7 +58,25 @@ const NavBar = () => {
 				</div>
 				<div className="w-96 order-2 flex justify-center ">
 					{/*social -media-icons*/}
-					<div className="flex gap-6 text-white hover:text-[#f5cac3] cursor-pointer ">
+					<div className="flex gap-6 text-white hover:text-[#f5cac3] cursor-pointer items-center">
+						<Link href="/About">
+							<a className="md:text-md sm:text-xs rounded-full p-2 m-1 bg-white text-gray-400">
+								{" "}
+								<FcAbout
+									size={14}
+									className="  hover:text-[#0077b6] transition duration-150 ease-in-out "
+								/>
+							</a>
+						</Link>
+						<Link href="/About">
+							<a className="md:text-md sm:text-xs rounded-full p-2 m-1 bg-white text-gray-400">
+								{" "}
+								<SiAboutdotme
+									size={14}
+									className="  hover:text-[#0077b6] transition duration-150 ease-in-out "
+								/>
+							</a>
+						</Link>
 						<Link href="https://github.com/shaymk1">
 							<a>
 								{" "}
