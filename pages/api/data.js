@@ -1,4 +1,4 @@
-export default function data() {
+export default {
 	Trending: [
 		{
 			id: 1,
@@ -157,7 +157,7 @@ export default function data() {
 				designation: "Founder",
 			},
 		},
-	];
+	],
 	Posts: [
 		{
 			id: 1,
@@ -488,7 +488,7 @@ export default function data() {
 				designation: "Founder",
 			},
 		},
-	];
+	],
 	Popular: [
 		{
 			id: 1,
@@ -689,5 +689,5 @@ export default function data() {
 				designation: "Founder",
 			},
 		},
-	];
+	],
 };
