@@ -13,6 +13,8 @@ import {
 	FaLinkedin,
 } from "react-icons/fa";
 
+
+
 const NavBar = () => {
 	//switching themes
 	const {systemTheme, theme, setTheme} = useTheme()
